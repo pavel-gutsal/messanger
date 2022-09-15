@@ -1,0 +1,38 @@
+.Messages {
+  background: rgb(232, 232, 232);
+  height: auto;
+  height: calc(100vh - 90px);
+  overflow: scroll;
+  position: relative;
+  padding: 10px 0;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__wrap {
+    max-width: 1000px;
+    width:90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding-bottom: 10px;
+
+    @media screen and (max-width:1040px){
+      width: 100vw;
+      padding: 0 20px;
+    }
+
+    @media screen and (max-width:600px){
+      width: 100vw;
+      padding: 0 8px;
+      padding-bottom: 40px;
+    }
+  }
+}
+
+.scroll {
+  margin-top: 30px;
+  height:30px;
+}

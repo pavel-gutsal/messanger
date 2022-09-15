@@ -1,0 +1,15 @@
+.UserList {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  overflow: scroll;
+  padding-bottom: 20px;
+  max-height: calc(100vh - 230px);
+
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+  }
+}

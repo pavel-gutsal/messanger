@@ -1,0 +1,205 @@
+//local variable
+$bgLightBlue: rgb(242, 226, 252);
+
+.Message{
+  display: flex;
+  gap: 4px;
+
+  &.isOwn {
+    flex-direction: row-reverse;
+  }
+
+  &__unit {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  &__avatar {
+    width:40px;
+    height:40px;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.15);
+  }
+
+  &__person-wrapper {
+    display: flex;
+
+    &.isOwn {
+      justify-content: flex-end;
+      padding-right: 10px;
+    }
+  }
+  
+  &__person {
+    font-family:"Open Sans", Arial, Helvetica, sans-serif;
+    padding-left: 10px;
+    font-size: 12px;
+    font-weight: 300;
+    color: rgb(69, 69, 69);
+    margin-top: -20px;
+  }
+  
+  &__content {
+    background: rgb(236, 253, 255);
+    padding: 8px;
+    border: none;
+    border-radius: 0 15px 15px 15px ;
+    display: flex;
+    flex-direction: column;
+    gap:4px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.15);
+
+    &.isOwn {
+      background: $bgLightBlue;
+      border-radius: 15px 0 15px 15px ;
+    }
+
+    &.containsImage {
+      padding: 0;
+      overflow: hidden;
+      gap:0;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    color: rgb(28, 28, 28);
+    padding-right: 8px;
+    overflow-wrap: anywhere;
+    white-space: pre-line;
+    max-width: 600px;
+
+    @media screen and (max-width:1040px){
+      max-width: 70vw;
+    }
+
+    @media screen and (max-width:600px){
+      max-width: 65vw;
+      padding-right: 4px;
+    }
+
+    &.isOwn {
+      padding-right: 0;
+      padding-left: 8px;
+
+      @media screen and (max-width:600px){
+        padding-left: 4px;
+      }
+    }
+  }
+  
+  &__image {
+    background: url('./background.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+    max-width: 600px;
+
+    @media screen and (max-width:1200px){
+      max-width: 480px;
+    }
+
+    @media screen and (max-width:1040px){
+      max-width: 70vw;
+    }
+
+    @media screen and (max-width:600px){
+      max-width: 65vw;
+    }
+  }
+
+  &__time-container {
+    width:100%;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+  }
+  
+  &__timeStamp {
+    font-size: 11px;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    color: rgb(67, 67, 67);
+
+    &.containsImage {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      color: rgb(229, 229, 229);
+      background: rgba(0, 0, 0, 0.6);
+      margin-right: 10px;
+      margin-bottom: 3px;
+      padding: 0 3px;
+    }
+  }
+  
+  &__delete-container{
+    padding-top: 5px;
+  }
+
+  &__delete {
+    background: none;
+    border: none;
+    margin:0 15px ;
+    outline: none;
+    width:45px;
+    height:45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: background 0.4s ease-in-out;
+    animation: trashBinAppear;
+    animation-duration: 0.4s;
+
+    @media screen and (max-width:600px){
+      margin:0 5px;
+      width: 35px;
+      height:35px;
+    }
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      background: rgb(237, 236, 254);
+      border: none;
+
+    }
+  }
+
+  &__deleteImg {
+    width: 30px;
+    height:30px;
+
+    @media screen and (max-width:600px){
+      width: 25px;
+      height:25px;
+    }
+  }
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.margin {
+  margin-top: 25px;
+}
+
+@keyframes trashBinAppear {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  80% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}

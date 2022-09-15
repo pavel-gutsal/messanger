@@ -1,0 +1,9 @@
+.Home {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+
+  @media screen and (max-width:1040px) {
+    height: calc(100vh - 60px);
+  }
+}

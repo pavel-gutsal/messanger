@@ -1,0 +1,42 @@
+.ActiveChats {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow: scroll;
+  padding-bottom: 20px;
+  max-height: calc(100vh - 230px);
+
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+  }
+
+  &__empty-wrapper {
+    width: 160px;
+    height: 160px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    margin-top: 100px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+  }
+
+  &__empty {
+    width: 100px;
+    height:100px;
+  }
+
+  &__emptyText {
+    font-size: 14px;
+    line-height: 18px;
+    color: rgba(66, 1, 135, 0.7);
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+  }
+}
