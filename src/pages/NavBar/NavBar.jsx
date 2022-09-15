@@ -6,7 +6,6 @@ import './NavBar.scss';
 
 export const NavBar = ({ setSideBarOpen }) => {
   const location = useLocation();
-  console.log(location.pathname === '/signIn');
 
   return (
     <>

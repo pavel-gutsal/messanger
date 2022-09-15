@@ -18,9 +18,6 @@ export const useCreateNewUser = () => {
       };
 
       await setDoc(doc(db, 'users', user.uid), newUser);
-      console.log('new user created');
-    } else {
-      console.log('skip');
     }
   };
 

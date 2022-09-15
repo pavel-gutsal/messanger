@@ -8,7 +8,7 @@ import { NavBar } from './pages/NavBar/NavBar';
 export const App = () => {
   const { currentUser } = useContext(AuthContext);
   const { user, authIsReady } = currentUser;
-  const [sideBarOpen, setSideBarOpen] = useState(false);
+  const [sideBarOpen, setSideBarOpen] = useState(true);
   /*eslint-disable*/
   return (
     <div className="App">

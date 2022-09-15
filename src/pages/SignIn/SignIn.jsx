@@ -6,7 +6,6 @@ import './SignIn.scss';
 
 export const SignIn = () => {
   const { signInFacebook, facebookError } = useSigninFacebook();
-  console.log(facebookError);
 
   return (
     <div className="SignIn">

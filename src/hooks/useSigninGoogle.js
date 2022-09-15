@@ -13,7 +13,6 @@ export const useSigninGoogle = () => {
       const provider = new GoogleAuthProvider();
       const res = await signInWithPopup(auth, provider);
 
-      console.log(res.user);
       if (res.user) {
         dispatch({ action: 'SIGNIN', payload: res.user });
       } else {
