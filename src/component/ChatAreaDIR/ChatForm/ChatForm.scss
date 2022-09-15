@@ -14,6 +14,10 @@ $ChatAreaBG: rgb(232, 232, 232);
   padding: 5px 0;
   background: $ChatAreaBG;
 
+  @media screen and (max-width: 1040px) {
+    position: fixed;
+  }
+
   &__form {
     display: flex;
     width: 90%;

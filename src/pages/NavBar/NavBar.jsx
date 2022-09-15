@@ -18,9 +18,11 @@ export const NavBar = ({ setSideBarOpen }) => {
           }}
         >
           <img
-            src="./assets/dots.svg"
+            className="NavBar__back"
+            src="./assets/back.svg"
             alt="dots"
           />
+          back to user list
         </button>
       </div>
       <Outlet />
